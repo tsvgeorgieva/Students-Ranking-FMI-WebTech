@@ -2,6 +2,9 @@
 <?php if (count($this->students) == 0) : ?>
     <p>There are no students right now. Would you like to <a href="/students/create">create a student</a>?</p>
 <?php else : ?>
+    <div class="m-y-1">
+        <a class="btn btn-primary" href="/students/create">Create a student</a>
+    </div>
     <table class="table table-striped table-bordered">
         <thead>
         <tr>

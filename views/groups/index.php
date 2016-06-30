@@ -2,6 +2,9 @@
 <?php if (count($this->groups) == 0) : ?>
     <p>There are no groups right now. Would you like to <a href="/groups/create">create a group</a>?</p>
 <?php else : ?>
+    <div class="m-y-1">
+        <a class="btn btn-primary" href="/groups/create">Create a group</a>
+    </div>
     <table class="table table-striped table-bordered">
         <thead>
         <tr>

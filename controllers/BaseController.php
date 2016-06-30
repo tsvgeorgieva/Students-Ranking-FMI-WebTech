@@ -8,6 +8,7 @@ abstract class BaseController
     protected $isViewRendered = false;
     protected $isPost = false;
     protected $isLoggedIn = false;
+    protected $title = "Students Ranking";
 
     function __construct($controllerName, $actionName)
     {
