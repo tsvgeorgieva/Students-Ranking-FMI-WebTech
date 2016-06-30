@@ -1,3 +1,4 @@
+<h1>Students</h1>
 <?php if (count($this->students) == 0) : ?>
     <p>There are no students right now. Would you like to <a href="/students/create">create a student</a>?</p>
 <?php else : ?>
