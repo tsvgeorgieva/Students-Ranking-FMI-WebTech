@@ -79,3 +79,24 @@ insert into students_activities(student_id, activity_id, datetime) values (12, 1
 insert into students_activities(student_id, activity_id, datetime) values (12, 2, STR_TO_DATE('12-3-2016', '%d-%m-%Y'));
 insert into students_activities(student_id, activity_id, datetime) values (13, 3, STR_TO_DATE('11-3-2016', '%d-%m-%Y'));
 insert into students_activities(student_id, activity_id, datetime) values (13, 5, STR_TO_DATE('17-3-2016', '%d-%m-%Y'));
+
+insert into students_activities(student_id, activity_id, datetime) values (1, 7, STR_TO_DATE('1-3-2016', '%d-%m-%Y'));
+insert into students_activities(student_id, activity_id, datetime) values (1, 6, STR_TO_DATE('10-3-2016', '%d-%m-%Y'));
+insert into students_activities(student_id, activity_id, datetime) values (1, 7, STR_TO_DATE('15-3-2016', '%d-%m-%Y'));
+insert into students_activities(student_id, activity_id, datetime) values (1, 10, STR_TO_DATE('11-3-2016', '%d-%m-%Y'));
+insert into students_activities(student_id, activity_id, datetime) values (3, 12, STR_TO_DATE('1-3-2016', '%d-%m-%Y'));
+insert into students_activities(student_id, activity_id, datetime) values (5, 11, STR_TO_DATE('10-3-2016', '%d-%m-%Y'));
+insert into students_activities(student_id, activity_id, datetime) values (7, 10, STR_TO_DATE('10-3-2016', '%d-%m-%Y'));
+insert into students_activities(student_id, activity_id, datetime) values (2, 9, STR_TO_DATE('12-3-2016', '%d-%m-%Y'));
+insert into students_activities(student_id, activity_id, datetime) values (2, 7, STR_TO_DATE('11-3-2016', '%d-%m-%Y'));
+insert into students_activities(student_id, activity_id, datetime) values (2, 15, STR_TO_DATE('17-3-2016', '%d-%m-%Y'));
+insert into students_activities(student_id, activity_id, datetime) values (10, 15, STR_TO_DATE('1-3-2016', '%d-%m-%Y'));
+insert into students_activities(student_id, activity_id, datetime) values (17, 14, STR_TO_DATE('10-3-2016', '%d-%m-%Y'));
+insert into students_activities(student_id, activity_id, datetime) values (10, 13, STR_TO_DATE('15-3-2016', '%d-%m-%Y'));
+insert into students_activities(student_id, activity_id, datetime) values (10, 12, STR_TO_DATE('11-3-2016', '%d-%m-%Y'));
+insert into students_activities(student_id, activity_id, datetime) values (18, 14, STR_TO_DATE('1-3-2016', '%d-%m-%Y'));
+insert into students_activities(student_id, activity_id, datetime) values (12, 10, STR_TO_DATE('10-3-2016', '%d-%m-%Y'));
+insert into students_activities(student_id, activity_id, datetime) values (12, 6, STR_TO_DATE('10-3-2016', '%d-%m-%Y'));
+insert into students_activities(student_id, activity_id, datetime) values (15, 7, STR_TO_DATE('12-3-2016', '%d-%m-%Y'));
+insert into students_activities(student_id, activity_id, datetime) values (15, 8, STR_TO_DATE('11-3-2016', '%d-%m-%Y'));
+insert into students_activities(student_id, activity_id, datetime) values (15, 5, STR_TO_DATE('17-3-2016', '%d-%m-%Y'));

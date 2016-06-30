@@ -23,6 +23,12 @@ abstract class BaseModel
         return $statement->fetch_all(MYSQLI_ASSOC);
     }
 
+    public function getAllNameAndId()
+    {
+        $statement = self::$db->query("SELECT id, name FROM {$this->tableName};");
+        return $statement->fetch_all(MYSQLI_ASSOC);
+    }
+
     public function getById($id)
     {
         $statement = self::$db->prepare("SELECT * FROM {$this->tableName} WHERE id = ?");

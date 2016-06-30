@@ -9,6 +9,7 @@ abstract class BaseController
     protected $isPost = false;
     protected $isLoggedIn = false;
     protected $title = "Students Ranking";
+    protected $includeLayout = true;
 
     function __construct($controllerName, $actionName)
     {
@@ -35,7 +36,7 @@ abstract class BaseController
         // Implement the default action in the subclasses
     }
 
-    public function renderView($viewName = null, $includeLayout = true)
+    public function renderView($viewName = null)
     {
         if (!$this->isViewRendered) {
             if ($viewName == null) {
@@ -43,12 +44,12 @@ abstract class BaseController
             }
             $viewFileName = 'views/' . $this->controllerName
                 . '/' . $viewName . '.php';
-            if ($includeLayout) {
+            if ($this->includeLayout) {
                 $headerFile = 'views/layouts/' . $this->layoutName . '/header.php';
                 include_once($headerFile);
             }
             include_once($viewFileName);
-            if ($includeLayout) {
+            if ($this->includeLayout) {
                 $footerFile = 'views/layouts/' . $this->layoutName . '/footer.php';
                 include_once($footerFile);
             }

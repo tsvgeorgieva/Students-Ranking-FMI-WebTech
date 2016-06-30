@@ -23,7 +23,6 @@ class StudentsModel extends BaseModel
         $statement->bind_param("s", $facultyNumber);
         $statement->execute();
         $result = $statement->get_result()->fetch_assoc();
-        var_dump($result);
         return $result['COUNT(id)'] > 0;
     }
 

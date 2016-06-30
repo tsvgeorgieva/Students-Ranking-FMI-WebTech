@@ -16,10 +16,10 @@
 <body>
 <header>
     <nav class="navbar navbar-light bg-faded">
-        <a class="navbar-brand" href="#">Students Ranking</a>
+        <a class="navbar-brand" href="/">Students Ranking</a>
         <ul class="nav navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="/">Rankings</a>
+                <a class="nav-link" href="/rankings">Rankings</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/students">Students</a>
