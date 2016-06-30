@@ -45,6 +45,16 @@
         </select>
     </div>
 
+    <div class="form-group col-xs-6 col-sm-4 col-lg-3">
+        <label class="form-control-label">From</label>
+        <input name="date_from" type="date" value="<?= $this->dateFrom ?>" class="form-control"/>
+    </div>
+
+    <div class="form-group col-xs-6 col-sm-4 col-lg-3">
+        <label class="form-control-label">To</label>
+        <input name="date_to" type="date" value="<?= $this->dateTo ?>" class="form-control"/>
+    </div>
+
     <div class="col-xs-12">
         <input class="btn btn-primary" type="submit" value="See ranking"/>
     </div>

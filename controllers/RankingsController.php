@@ -18,6 +18,8 @@ class RankingsController extends BaseController
     public $groupId;
     public $studentId;
     public $specialityId;
+    public $dateFrom;
+    public $dateTo;
     private $db;
     private $coursesDb;
 
@@ -30,6 +32,9 @@ class RankingsController extends BaseController
         $this->specialitiesDb = new SpecialitiesModel();
         $this->classesDb = new ClassesModel();
         $this->groupsDb = new GroupsModel();
+
+        $this->dateFrom = date('Y-m-d', strtotime('-1 week'));
+        $this->dateTo = date('Y-m-d');
     }
 
     public function index()
@@ -40,8 +45,16 @@ class RankingsController extends BaseController
             $this->classId = $_POST["class_id"];
             $this->groupId = $_POST["group_id"];
             $this->studentId = $_POST["student_id"];
+            $this->dateFrom = $_POST["date_from"];
+            $this->dateTo = $_POST["date_to"];
 
-            $this->studentsRankings = $this->db->getRankings($this->courseId, $this->specialityId, $this->classId, $this->groupId, $this->studentId);
+            $this->studentsRankings = $this->db->getRankings($this->courseId,
+                $this->specialityId,
+                $this->classId,
+                $this->groupId,
+                $this->studentId,
+                $this->dateFrom,
+                $this->dateTo);
         }
 
         $this->allCourses = $this->coursesDb->getAllNameAndId();

@@ -4,38 +4,50 @@ class RankingsModel extends BaseModel
 {
     protected $tableName = "students";
 
-    public function getRankings($courseId, $specialityId, $classId, $groupId, $studentId)
+    public function getRankings($courseId, $specialityId, $classId, $groupId, $studentId, $dateFrom, $dateTo)
     {
         $conditions = array();
         $bindParamsStr = "";
         $bindParams = array();
         if ($courseId != '') {
             array_push($conditions, "c.id = ?");
-            $bindParamsStr .= "i";
+            $bindParamsStr = $bindParamsStr . "s";
             array_push($bindParams, $courseId);
         }
         if ($specialityId != '') {
             array_push($conditions, "sp.id = ?");
-            $bindParamsStr .= "i";
+            $bindParamsStr = $bindParamsStr . "s";
             array_push($bindParams, $specialityId);
         }
 
         if ($classId != '') {
             array_push($conditions, "cl.id = ?");
-            $bindParamsStr .= "i";
+            $bindParamsStr = $bindParamsStr . "s";
             array_push($bindParams, $classId);
         }
 
         if ($groupId != '') {
             array_push($conditions, "g.id = ?");
-            $bindParamsStr .= "i";
+            $bindParamsStr = $bindParamsStr . "s";
             array_push($bindParams, $groupId);
         }
 
         if ($studentId != '') {
             array_push($conditions, "s.id = ?");
-            $bindParamsStr .= "i";
+            $bindParamsStr = $bindParamsStr . "s";
             array_push($bindParams, $studentId);
+        }
+
+        if ($dateFrom != '') {
+            array_push($conditions, "sa.datetime >= ?");
+            $bindParamsStr = $bindParamsStr . "s";
+            array_push($bindParams, $dateFrom);
+        }
+
+        if ($dateTo != '') {
+            array_push($conditions, "sa.datetime <= ?");
+            $bindParamsStr = $bindParamsStr . "s";
+            array_push($bindParams, $dateTo);
         }
 
         $conditionsStr = count($conditions) > 0 ? 'WHERE ' . implode(" AND ", $conditions) : '';
