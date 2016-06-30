@@ -1,5 +1,5 @@
-<form method="post" action="/rankings/index" class="row">
-    <div class="form-group col-xs-6 col-sm-4 col-lg-3">
+<form method="post" action="/rankings/index" class="row m-b-1">
+    <div class="form-group col-xs-12 col-sm-6 col-lg-3">
         <label class="form-control-label">Course</label>
         <select class="form-control" name="course_id">
             <option value="" class="text-muted">Choose course</option>
@@ -8,7 +8,7 @@
             <?php endforeach; ?>
         </select>
     </div>
-    <div class="form-group col-xs-6 col-sm-4 col-lg-3">
+    <div class="form-group col-xs-12 col-sm-6 col-lg-3">
         <label class="form-control-label">Speciality</label>
         <select class="form-control" name="speciality_id">
             <option value="">Choose speciality</option>
@@ -17,7 +17,7 @@
             <?php endforeach; ?>
         </select>
     </div>
-    <div class="form-group col-xs-6 col-sm-4 col-lg-3">
+    <div class="form-group col-xs-12 col-sm-6 col-lg-3">
         <label class="form-control-label">Class</label>
         <select class="form-control" name="class_id">
             <option value="">Choose class</option>
@@ -26,7 +26,7 @@
             <?php endforeach; ?>
         </select>
     </div>
-    <div class="form-group col-xs-6 col-sm-4 col-lg-3">
+    <div class="form-group col-xs-12 col-sm-6 col-lg-3">
         <label class="form-control-label">Group</label>
         <select class="form-control" name="group_id">
             <option value="">Choose group</option>
@@ -35,7 +35,7 @@
             <?php endforeach; ?>
         </select>
     </div>
-    <div class="form-group col-xs-6 col-sm-4 col-lg-3">
+    <div class="form-group col-xs-12 col-sm-6 col-lg-3">
         <label class="form-control-label">Student</label>
         <select class="form-control" name="student_id">
             <option value="">Choose student</option>
@@ -45,25 +45,23 @@
         </select>
     </div>
 
-    <div class="form-group col-xs-6 col-sm-4 col-lg-3">
+    <div class="form-group col-xs-12 col-sm-6 col-lg-3">
         <label class="form-control-label">From</label>
         <input name="date_from" type="date" value="<?= $this->dateFrom ?>" class="form-control"/>
     </div>
 
-    <div class="form-group col-xs-6 col-sm-4 col-lg-3">
+    <div class="form-group col-xs-12 col-sm-6 col-lg-3">
         <label class="form-control-label">To</label>
         <input name="date_to" type="date" value="<?= $this->dateTo ?>" class="form-control"/>
     </div>
 
-    <div class="col-xs-12">
+    <div class="col-xs-12 col-sm-6 col-lg-3">
         <input class="btn btn-primary" type="submit" value="See ranking"/>
     </div>
 </form>
 
 <h1>Students ranking</h1>
-<?php if (count($this->studentsRankings) == 0) : ?>
-    <p>There are no students right now. Would you like to <a href="/students/create">create a student</a>?</p>
-<?php else : ?>
+<?php if (count($this->studentsRankings) > 0) : ?>
     <table class="table table-striped table-bordered">
         <thead>
         <tr>

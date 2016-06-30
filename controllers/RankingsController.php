@@ -39,6 +39,12 @@ class RankingsController extends BaseController
 
     public function index()
     {
+        $this->allCourses = $this->coursesDb->getAllNameAndId();
+        $this->allSpecialities = $this->specialitiesDb->getAllNameAndId();
+        $this->allClasses = $this->classesDb->getAllNameAndId();
+        $this->allGroups = $this->groupsDb->getAllNameAndId();
+        $this->allStudents = $this->studentsDb->getAllNameAndId();
+
         if ($this->isPost) {
             $this->courseId = $_POST["course_id"];
             $this->specialityId = $_POST["speciality_id"];
@@ -47,20 +53,14 @@ class RankingsController extends BaseController
             $this->studentId = $_POST["student_id"];
             $this->dateFrom = $_POST["date_from"];
             $this->dateTo = $_POST["date_to"];
-
-            $this->studentsRankings = $this->db->getRankings($this->courseId,
-                $this->specialityId,
-                $this->classId,
-                $this->groupId,
-                $this->studentId,
-                $this->dateFrom,
-                $this->dateTo);
         }
-
-        $this->allCourses = $this->coursesDb->getAllNameAndId();
-        $this->allSpecialities = $this->specialitiesDb->getAllNameAndId();
-        $this->allClasses = $this->classesDb->getAllNameAndId();
-        $this->allGroups = $this->groupsDb->getAllNameAndId();
-        $this->allStudents = $this->studentsDb->getAllNameAndId();
+        
+        $this->studentsRankings = $this->db->getRankings($this->courseId,
+            $this->specialityId,
+            $this->classId,
+            $this->groupId,
+            $this->studentId,
+            $this->dateFrom,
+            $this->dateTo);
     }
 }
