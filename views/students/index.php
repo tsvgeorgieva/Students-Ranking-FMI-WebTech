@@ -7,6 +7,8 @@
             <th>Name</th>
             <th>Faculty number</th>
             <th>Group</th>
+            <th>Class</th>
+            <th>Speciality</th>
         </tr>
         </thead>
         <tbody>
@@ -14,7 +16,9 @@
             <tr>
                 <td><?= $student['name'] ?></td>
                 <td><?= $student['faculty_number'] ?></td>
-                <td><?= $student['group_id'] ?></td>
+                <td><?= $student['group_name'] ?></td>
+                <td><?= $student['class_name'] ?></td>
+                <td><?= $student['speciality_name'] ?></td>
             </tr>
         <?php endforeach; ?>
         </tbody>
