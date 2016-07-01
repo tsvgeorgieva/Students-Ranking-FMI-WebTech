@@ -1,6 +1,6 @@
 <?php
 
-define('DEFAULT_CONTROLLER', 'students');
+define('DEFAULT_CONTROLLER', 'rankings');
 define('DEFAULT_ACTION', 'index');
 define('DEFAULT_LAYOUT', 'default');
 

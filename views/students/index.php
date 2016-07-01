@@ -13,6 +13,7 @@
             <th>Group</th>
             <th>Class</th>
             <th>Speciality</th>
+            <th></th>
         </tr>
         </thead>
         <tbody>
@@ -23,6 +24,7 @@
                 <td><?= $student['group_name'] ?></td>
                 <td><?= $student['class_name'] ?></td>
                 <td><?= $student['speciality_name'] ?></td>
+                <td><a href="/students/activities/<?= $student['id'] ?>">See activities</a></td>
             </tr>
         <?php endforeach; ?>
         </tbody>

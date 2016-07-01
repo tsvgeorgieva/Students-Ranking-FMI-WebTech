@@ -99,6 +99,11 @@ abstract class BaseController
         $this->addMessage($msg, 'info');
     }
 
+    function addSuccessMessage($msg)
+    {
+        $this->addMessage($msg, 'success');
+    }
+
     function addErrorMessage($msg)
     {
         $this->addMessage($msg, 'error');

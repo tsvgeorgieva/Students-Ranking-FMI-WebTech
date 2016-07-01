@@ -9,18 +9,18 @@
         <thead>
         <tr>
             <th>Id</th>
+            <th>Course</th>
             <th>Name</th>
             <th>Points</th>
-            <th>Course</th>
         </tr>
         </thead>
         <tbody>
         <?php foreach ($this->activities as $activity) : ?>
             <tr>
                 <td><?= $activity['id'] ?></td>
+                <td><?= $activity['course_name'] ?></td>
                 <td><?= $activity['name'] ?></td>
                 <td><?= $activity['points'] ?></td>
-                <td><?= $activity['course_name'] ?></td>
             </tr>
         <?php endforeach; ?>
         </tbody>

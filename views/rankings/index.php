@@ -55,7 +55,7 @@
         <input name="date_to" type="date" value="<?= $this->dateTo ?>" class="form-control"/>
     </div>
 
-    <div class="col-xs-12 col-sm-6 col-lg-3">
+    <div class="col-xs-12">
         <input class="btn btn-primary" type="submit" value="See ranking"/>
     </div>
 </form>
